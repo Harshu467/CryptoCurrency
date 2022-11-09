@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Logo from '../components/Logo'
 import Navigation from '../components/Navigation'
 
-function Home() {
+const Home=()=> {
   return (
     <main className='w-full flex flex-col first-letter:content-center items-center 
     relative text-white font-nunito'>
