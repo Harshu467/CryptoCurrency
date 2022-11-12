@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+#Azure
+/.github
 # testing
 /coverage
 
