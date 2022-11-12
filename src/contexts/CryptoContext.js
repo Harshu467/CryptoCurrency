@@ -18,7 +18,7 @@ export const CryptoProvider = ({children})=>{
         try {
             const data = await fetch(`https://api.coingecko.com/api/v3/search?query=${query}`).then(res=>res.json()).then(json=>json)
             setSearchData(data)
-            console.log(data)
+            console.log(data.coins)
             
         } catch (error) {
             console.log(error)

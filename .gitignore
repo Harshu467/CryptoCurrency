@@ -6,7 +6,9 @@
 .pnp.js
 
 #Azure
-/.github
+/github
+/azure-static-web-apps-purple-tree-04d0e4800.yml
+
 # testing
 /coverage
 
