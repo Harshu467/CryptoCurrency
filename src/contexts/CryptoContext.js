@@ -26,7 +26,6 @@ export const CryptoProvider = ({children})=>{
     }
     useLayoutEffect(() => {
         getCryptoData();
-        getSearchData();
     }, [])
     return(
         <CryptoContext.Provider value={{CryptoData,SearchData,getSearchData}}>
