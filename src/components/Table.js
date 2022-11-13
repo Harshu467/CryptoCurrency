@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { CryptoContext } from '../contexts/CryptoContext'
 
 const Table = () => {
-    let { cryptoData } = useContext(CryptoContext)
+    let { cryptoData, currency } = useContext(CryptoContext)
     return (
         <>
             <div
@@ -12,7 +12,6 @@ const Table = () => {
                         <table className='w-full table-fixed'>
                             <thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100 ' >
                                 <tr>
-                                    <th className="py-1">Current Rank</th>
                                     <th className="py-1">Assets</th>
                                     <th className="py-1">Name</th>
                                     <th className="py-1">Price</th>
@@ -28,7 +27,6 @@ const Table = () => {
                                     cryptoData.map(data => {
                                         return (
                                             <tr key={data.id} className='text-center border-b border-gray-100 hover:bg-gray-200 last:border-b-0'>
-                                                <td className="py-1">{data.market_cap_rank}</td>
                                                 <td className="py-4 flex items-center uppercase">
                                                     <button className='outline-0 border-0 bg-none cursor-pointer'>
                                                         <svg className='w-[1.5rem] ml-1.5 fill-gray-100 hover:fill-cyan' width="30" height="30" viewBox="0 0 30 30" fill="cyan" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +48,7 @@ const Table = () => {
                                                 <td className="py-4">{
                                                     new Intl.NumberFormat("en-IN",{
                                                         style:"currency",
-                                                        currency:"inr"
+                                                        currency : currency
                                                     }).format(data.current_price)
                                                 }</td>
                                                 <td className="py-4">{data.total_volume}</td>
