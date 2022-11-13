@@ -2,13 +2,13 @@ import React, { useContext } from 'react'
 import { CryptoContext } from '../contexts/CryptoContext'
 
 const Table = () => {
-    let { CryptoData } = useContext(CryptoContext)
+    let { cryptoData } = useContext(CryptoContext)
     return (
         <>
             <div
                 className='flex flex-col mt-9 border border-gray-100 rounded'>
                 {
-                    CryptoData ?
+                    cryptoData ?
                         <table className='w-full table-fixed'>
                             <thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100 ' >
                                 <tr>
@@ -25,7 +25,7 @@ const Table = () => {
                             </thead>
                             <tbody>
                                 {
-                                    CryptoData.map(data => {
+                                    cryptoData.map(data => {
                                         return (
                                             <tr key={data.id} className='text-center border-b border-gray-100 hover:bg-gray-200 last:border-b-0'>
                                                 <td className="py-1">{data.market_cap_rank}</td>
