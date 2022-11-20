@@ -9,7 +9,7 @@ const Navigation = () => {
                 to='/'
                 end
                 className={({ isActive }) => {
-                    return `w-full text-base text-center font-nunito m-2.5
+                    return `w-full text-base text-center font-nunito m-2.5 hover:text-cyan
           ${
             isActive
               ? "bg-cyan text-gray-300"
@@ -23,7 +23,7 @@ const Navigation = () => {
             <NavLink
                 to='/trending'
                 className={({ isActive }) => {
-                    return `w-full text-base text-center font-nunito m-2.5
+                    return `w-full text-base text-center font-nunito m-2.5 hover:text-cyan
           ${
             isActive
               ? "bg-cyan text-gray-300"
@@ -37,7 +37,7 @@ const Navigation = () => {
             <NavLink
                 to='/saved'
                 className={({ isActive }) => {
-                    return `w-full text-base text-center font-nunito m-2.5
+                    return `w-full text-base text-center font-nunito m-2.5 hover:text-cyan
           ${
             isActive
               ? "bg-cyan text-gray-300"
