@@ -4,7 +4,7 @@ import React from "react";
 export const TrendingContext = createContext({});
 
 export const TrendingProvider = ({children})=>{
-    const [TrendData, setTrendData] = useState();
+    const [trendData, setTrendData] = useState();
     const getTrendData = async () => {
         try {
             const data = await fetch(
@@ -12,8 +12,8 @@ export const TrendingProvider = ({children})=>{
             )
               .then((res) => res.json())
               .then((json) => json);
-            setTrendData(data.coins);
             console.log(data.coins)
+            setTrendData(data.coins);
           } catch (error) {
             console.log(error);
           }   
@@ -30,7 +30,7 @@ export const TrendingProvider = ({children})=>{
       return (
         <TrendingContext.Provider
         value={{
-          TrendData,
+          trendData,
           resetTrendingResult,
         }}
       >
