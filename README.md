@@ -1,7 +1,7 @@
 # React Website Tutorial: ⭐Build Feature Rich Crypto Screener App with Tailwind CSS
 
 
-### Images of The Crypto Screener Website:
+### Images of The CryptoCurrency Website:
 
 ![Crypto](https://github.com/codebucks27/CryptoBucks-A-crypto-screener-application/blob/main/Website-Images/Crypto.png)
 ![Crypto-CryptoDetails](https://github.com/codebucks27/CryptoBucks-A-crypto-screener-application/blob/main/Website-Images/Crypto-CryptoDetails.png)
