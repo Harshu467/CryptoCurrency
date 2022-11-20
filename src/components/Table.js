@@ -58,10 +58,10 @@ const Table = () => {
             <thead className="capitalize text-base text-gray-100 font-medium border-b border-gray-100 ">
               <tr>
                 <th className="py-1">Assets</th>
-                <th className="py-1">Name</th>
+                <th className="py-1 sm:table-cell hidden">Name</th>
                 <th className="py-1">Price</th>
-                <th className="py-1">Total Volume</th>
-                <th className="py-1">Market Cap Change</th>
+                <th className="py-1 md:table-cell hidden">Total Volume</th>
+                <th className="py-1 sm:table-cell hidden">Market Cap Change</th>
                 <th className="py-1 lg:table-cell hidden">1H</th>
                 <th className="py-1 lg:table-cell hidden">24H</th>
                 <th className="py-1 lg:table-cell hidden">7D</th>
@@ -89,7 +89,7 @@ const Table = () => {
                         </Link>
                       </span>
                     </td>
-                    <td className="py-4">
+                    <td className="py-4 sm:table-cell hidden">
                       <Link to={`/${data.id}`} className="cursor-pointer">
                         {data.name}
                       </Link>
@@ -100,12 +100,12 @@ const Table = () => {
                         currency: currency,
                       }).format(data.current_price)}
                     </td>
-                    <td className="py-4">{data.total_volume}</td>
+                    <td className="py-4 md:table-cell hidden">{data.total_volume}</td>
                     <td
                       className={
                         data.market_cap_change_percentage_24h > 0
-                          ? "py-4 text-green"
-                          : "text-red"
+                          ? "py-4 text-green sm:table-cell hidden"
+                          : "text-red sm:table-cell hidden"
                       }
                     >
                       {Number(data.market_cap_change_percentage_24h).toFixed(2)}
