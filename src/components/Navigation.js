@@ -9,11 +9,11 @@ const Navigation = () => {
                 to='/'
                 end
                 className={({ isActive }) => {
-                    return `w-full text-base text-center font-nunito m-2.5 hover:text-cyan
+                    return `w-full text-base text-center font-nunito m-2.5 
           ${
             isActive
               ? "bg-cyan text-gray-300"
-              : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300"
+              : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300 hover:text-cyan"
           }
               border-0 cursor-pointer rounded capitalize font-semibold`;
                   }}
@@ -23,11 +23,11 @@ const Navigation = () => {
             <NavLink
                 to='/trending'
                 className={({ isActive }) => {
-                    return `w-full text-base text-center font-nunito m-2.5 hover:text-cyan
+                    return `w-full text-base text-center font-nunito m-2.5 
           ${
             isActive
               ? "bg-cyan text-gray-300"
-              : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300"
+              : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300 hover:text-cyan"
           }
               border-0 cursor-pointer rounded capitalize font-semibold`;
                   }}
@@ -37,11 +37,11 @@ const Navigation = () => {
             <NavLink
                 to='/saved'
                 className={({ isActive }) => {
-                    return `w-full text-base text-center font-nunito m-2.5 hover:text-cyan
+                    return `w-full text-base text-center font-nunito m-2.5 
           ${
             isActive
               ? "bg-cyan text-gray-300"
-              : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300"
+              : "bg-gray-200 text-gray-100hover:text-cyan active:bg-cyan active:text-gray-300 hover:text-cyan"
           }
               border-0 cursor-pointer rounded capitalize font-semibold`;
                   }}
