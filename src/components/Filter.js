@@ -30,7 +30,7 @@ const Filter = () => {
       <div className="flex mr-7">
         <form
           className="relative flex items-center font-nunito
-          mr-12
+          mr-1 md:mr-12
           "
           onSubmit={handleCurrencySubmit}
         >
