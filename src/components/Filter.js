@@ -23,7 +23,7 @@ const Filter = () => {
   return (
     <div
       className="w-full h-12 border-2 border-gray-100 rounded-lg
-    flex items-center justify-between relative
+    flex items-center justify-between relative lg:mt-0 lg:mr-7 sm:flex-row
     "
     >
       <Search />
@@ -57,12 +57,12 @@ const Filter = () => {
           </button>
         </form>
 
-        <label className="relative flex justify-center items-center">
-          <span className="font-bold mr-2">Sort by: </span>
+        <label className="relative flex justify-center items-center sm:justify-center sm:mt-0">
+          <span className="font-bold mr-2 sm:font-bold sm:text-base">Sort by: </span>
           <select
             name="sortby"
             className="rounded bg-gray-200 text-base 
-         pl-2 pr-10 py-0.5 leading-4 capitalize focus:outline-0
+         pl-2 pr-10 py-0.5 leading-4 capitalize focus:outline-0 sm:text-base sm:w-48
          "
             onClick={handleSort}
           >
