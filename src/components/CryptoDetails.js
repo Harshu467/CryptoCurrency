@@ -31,7 +31,7 @@ const CryptoDetails = () => {
   return ReactDOM.createPortal(
     <div
       className="fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 first-letter:
-    backdrop-blur-sm flex items-center justify-center font-nunito"
+    backdrop-blur-sm flex items-center justify-center font-nunito " 
       onClick={close}
     >
       <div
@@ -39,8 +39,8 @@ const CryptoDetails = () => {
         className="w-[65%] h-[75%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative"
       >
         {data ? (
-          <div className="flex items-center justify-between h-full w-full p-4">
-            <div className="flex flex-col w-[45%] h-full pr-2">
+          <div className="flex items-center justify-between h-full w-full p-4 lg:h-full md:flex-row">
+            <div className="flex flex-col w-[45%] h-full pr-2 md:w-[45%]">
               <div className="flex w-full items-center">
                 <img
                   className="w-[3rem] h-[3rem] mx-1.5"
@@ -258,7 +258,7 @@ const CryptoDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[55%] h-full pl-3">
+            <div className="flex flex-col w-[55%] h-full pl-3 md:pl-4 md:w-[55%] md:mt-0 ">
               <Chart id={data.id}/>
               <div className="flex flex-col mt-4">
                 <h3 className="text-white py-1"><span className="text-gray-100 capitalize mr-1">Market Cap Rank : </span>{data.market_cap_rank}</h3>
@@ -266,7 +266,7 @@ const CryptoDetails = () => {
                 <h3 className="text-white py-1"><span className="text-gray-100 capitalize mr-1">CoinGecko Score : </span>{data.coingecko_score}</h3>
               </div>
             </div>
-            <div className="absolute bottom-8 right-8 flex items-center">
+            <div className="absolute bottom-4 right-4 flex items-center md:bottom-8 sm:right-8 md:flex-row">
             {data.links.repos_url.github[0] && (
                 <a
                   className="text-lg px-1"
