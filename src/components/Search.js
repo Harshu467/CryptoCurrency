@@ -24,7 +24,7 @@ const SearchInput = ({ handleSearch }) => {
     <>
         <form
           className="w-96 relative flex items-center
-    ml-7 font-nunito
+    ml-7 font-nunito  lg:border-gray-100 lg:border-2 lg:justify-between lg:items-center lg:flex-row lg:h-12
     "
           onSubmit={handleSubmit}
         >
