@@ -82,9 +82,9 @@ const Chart = ({ id }) => {
     getChartData(id);
   }, [id, type, days]);
   return (
-    <div className="w-full h-[60%]">
+    <div className="w-full h-[60%] md:flex-col">
       <Graph data={chartData} currency={currency} type={type} />
-      <div className="flex">
+      <div className="flex flex-wrap md:flex-nowrap">
         <button
           className={`text-sm py-0.5 px-1.5 ml-2 bg-opacity-25 rounded capitalize ${
             type === "prices"
