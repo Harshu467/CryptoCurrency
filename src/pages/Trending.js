@@ -40,7 +40,8 @@ const Trending = () => {
       <Outlet/>
     </section>
     <div className="flex items-center justify-between mt-4 capitalize h-[2rem]">
-    <span>
+    <span> 
+      
       Project Created by{" "}
       <a
         className="text-cyan"
