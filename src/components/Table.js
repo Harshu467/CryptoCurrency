@@ -52,9 +52,9 @@ const Table = () => {
   let { cryptoData, currency } = useContext(CryptoContext);
   return (
     <>
-      <div className="flex flex-col mt-9 border border-gray-100 rounded">
+      <div className="flex flex-col mt-9 border border-gray-100 rounded ">
         {cryptoData ? (
-          <table className="w-full table-fixed">
+          <table className="w-full table-auto">
             <thead className="capitalize text-base text-gray-100 font-medium border-b border-gray-100 ">
               <tr>
                 <th className="py-1">Assets</th>
@@ -72,9 +72,9 @@ const Table = () => {
                 return (
                   <tr
                     key={data.id}
-                    className="text-center border-b border-gray-100 hover:bg-gray-200 last:border-b-0"
+                    className="text-center text-base border-b border-gray-100  hover:bg-gray-200 last:border-b-0"
                   >
-                    <td className="py-4 flex items-center uppercase">
+                    <td className="py-4 uppercase flex items-center">
                       <SaveBtn data={data} />
                       <Link to={`/${data.id}`} className="cursor-pointer">
                         <img
@@ -89,7 +89,7 @@ const Table = () => {
                         </Link>
                       </span>
                     </td>
-                    <td className="py-4 sm:table-cell hidden">
+                    <td className="py-4 cursor-pointer sm:table-cell hidden">
                       <Link to={`/${data.id}`} className="cursor-pointer">
                         {data.name}
                       </Link>
@@ -100,12 +100,12 @@ const Table = () => {
                         currency: currency,
                       }).format(data.current_price)}
                     </td>
-                    <td className="py-4 md:table-cell hidden">{data.total_volume}</td>
+                    <td className="py-4 sm:table-cell hidden">{data.total_volume}</td>
                     <td
                       className={
                         data.market_cap_change_percentage_24h > 0
-                          ? "py-4 text-green sm:table-cell hidden"
-                          : "text-red sm:table-cell hidden"
+                          ? "py-4 text-green md:table-cell hidden"
+                          : "py-4 text-red md:table-cell hidden"
                       }
                     >
                       {Number(data.market_cap_change_percentage_24h).toFixed(2)}
@@ -115,7 +115,7 @@ const Table = () => {
                       className={
                         data.price_change_percentage_1h_in_currency > 0
                           ? "py-4 text-green lg:table-cell hidden"
-                          : "text-red lg:table-cell hidden"
+                          : "py-4 text-red lg:table-cell hidden"
                       }
                     >
                       {Number(
@@ -127,7 +127,7 @@ const Table = () => {
                       className={
                         data.price_change_percentage_24h_in_currency > 0
                           ? "py-4 text-green lg:table-cell hidden"
-                          : "text-red lg:table-cell hidden"
+                          : "py-4 text-red lg:table-cell hidden"
                       }
                     >
                       {Number(
@@ -139,7 +139,7 @@ const Table = () => {
                       className={
                         data.price_change_percentage_7d_in_currency > 0
                           ? "py-4 text-green lg:table-cell hidden"
-                          : "text-red lg:table-cell hidden"
+                          : "py-4 text-red lg:table-cell hidden"
                       }
                     >
                       {Number(
@@ -165,7 +165,7 @@ const Table = () => {
         <span className="ml-2">Please Wait...</span>
       </div>}
       </div>
-      <div className="flex items-center justify-between mt-4 capitalize h-[2rem]">
+      <div className="flex md:flex-row flex-col items-center justify-between  mt-4 capitalize h-[2rem] ">
         <span>
           Project Created by{" "}
           <a
