@@ -18,18 +18,16 @@ const PerPage = () => {
 
   return (
     <form
-      className="relative flex items-center font-nunito
-          mr-12
-          "
+      className="relative flex items-center  font-nunito mr-6"
       onSubmit={handleSubmit}
     >
       <label
         htmlFor="perpage"
-        className="relative flex justify-center items-center
-          mr-2 font-bold
-          "
+        className="relative flex justify-center items-center"
       >
+        <span className="mr-2 lowercase" >
         per page:{" "}
+        </span>
       </label>
       <input
         type="number"
@@ -38,10 +36,8 @@ const PerPage = () => {
         max={250}
         ref={inputRef}
         placeholder="10"
-        className="w-16 rounded bg-gray-200 placeholder:text-gray-100
-     pl-2 required outline-0 border border-transparent 
-     focus:border-cyan leading-4
-     "
+        className="hover:appearance-none appearance-none w-8 h-6 rounded bg-gray-200 placeholder:text-gray-100 placeholder:text-sm required outline-0 
+        border border-transparent focus:border-cyan leading-4  text-center text-sm"
       />
       <button type="submit" className="ml-1 cursor-pointer">
         <img src={submitIcon} alt="submit" className="w-full h-auto" />
@@ -90,9 +86,9 @@ const Pagination = () => {
 
   if (cryptoData && cryptoData.length >= perPage) {
     return (
-      <div className="flex items-center">
+      <div className="flex md:flex-row flex-col items-center md:mt-0 mt-4 ">
         <PerPage />
-        <ul className="flex items-center justify-end text-sm">
+        <ul className="flex items-center justify-end  text-sm sm:mt-0 mt-4">
           <li className="flex items-center">
             <button className="outline-0 hover:text-cyan w-8" onClick={prev}>
               <img
