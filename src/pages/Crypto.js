@@ -6,7 +6,7 @@ import Tables from '../components/Table'
 const Crypto = () => {
   return (
     <section
-    className='w-[80%] h-full flex flex-end mt-16 mb-24 relative flex-col '>
+    className=' xs:w-[80%] w-[90%] h-full flex flex-end lg:mt-16 mb-24 relative flex-col '>
       <Filter/>
       <Tables/>
       <Outlet/>
