@@ -82,7 +82,7 @@ const Chart = ({ id }) => {
     getChartData(id);
   }, [id, type, days]);
   return (
-    <div className="w-full h-[60%] md:flex-col">
+    <div className="w-full  h-[60%]">
       <Graph data={chartData} currency={currency} type={type} />
       <div className="flex flex-wrap md:flex-nowrap">
         <button
