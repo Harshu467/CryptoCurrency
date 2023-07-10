@@ -61,15 +61,15 @@ const Saved = () => {
         {savedData ? (
           <table className="w-full table-auto">
             <thead className="capitalize text-base text-gray-100 font-medium border-b border-gray-100 ">
-              <tr>
-                <th className="py-1 ">asset</th>
-                <th className="py-1">name</th>
-                <th className="py-1">price</th>
-                <th className="py-1">total volume</th>
-                <th className="py-1">market cap change</th>
-                <th className="py-1">1H</th>
-                <th className="py-1">24H</th>
-                <th className="py-1">7D</th>
+            <tr>
+                <th className="py-1">Assets</th>
+                <th className="py-1 sm:table-cell hidden">Name</th>
+                <th className="py-1">Price</th>
+                <th className="py-1 md:table-cell hidden">Total Volume</th>
+                <th className="py-1 sm:table-cell hidden">Market Cap Change</th>
+                <th className="py-1 lg:table-cell hidden">1H</th>
+                <th className="py-1 lg:table-cell hidden">24H</th>
+                <th className="py-1 lg:table-cell hidden">7D</th>
               </tr>
             </thead>
             <tbody>
@@ -94,7 +94,7 @@ const Saved = () => {
                           </Link>
                         </span>
                       </td>
-                      <td className="py-4 cursor-pointer">
+                      <td className="py-4 cursor-pointer sm:table-cell hidden">
                         <Link to={`${data.id}`} className="cursor-pointer">
                           {data.name}
                         </Link>
@@ -107,12 +107,12 @@ const Saved = () => {
                           currency: currency,
                         }).format(data.current_price)}
                       </td>
-                      <td className="py-4">{data.total_volume}</td>
+                      <td className="py-4 sm:table-cell hidden">{data.total_volume}</td>
                       <td
                         className={
                           data.market_cap_change_percentage_24h < 0
-                            ? "py-4 text-red"
-                            : "py-4 text-green"
+                            ? "py-4 text-red md:table-cell hidden"
+                            : "py-4 text-green md:table-cell hidden"
                         }
                       >
                         {Number(data.market_cap_change_percentage_24h).toFixed(
@@ -123,8 +123,8 @@ const Saved = () => {
                       <td
                         className={
                           data.price_change_percentage_1h_in_currency < 0
-                            ? "py-4 text-red"
-                            : "py-4 text-green"
+                            ? "py-4 text-red lg:table-cell hidden"
+                            : "py-4 text-green lg:table-cell hidden"
                         }
                       >
                         {Number(
@@ -135,8 +135,8 @@ const Saved = () => {
                       <td
                         className={
                           data.price_change_percentage_24h_in_currency < 0
-                            ? "py-4 text-red"
-                            : "py-4 text-green"
+                            ? "py-4 text-red lg:table-cell hidden"
+                            : "py-4 text-green lg:table-cell hidden"
                         }
                       >
                         {Number(
@@ -147,8 +147,8 @@ const Saved = () => {
                       <td
                         className={
                           data.price_change_percentage_7d_in_currency < 0
-                            ? "py-4 text-red"
-                            : "py-4 text-green"
+                            ? "py-4 text-red lg:table-cell hidden"
+                            : "py-4 text-green lg:table-cell hidden"
                         }
                       >
                         {Number(
@@ -162,7 +162,7 @@ const Saved = () => {
             </tbody>
           </table>
         ) : (
-          <h1 className="min-h-[60vh] text-lg text-cyan flex items-center justify-center">
+          <h1 className="w-full min-h-[60vh] text-lg text-cyan flex items-center justify-center">
             There is no data to display!
           </h1>
         )}
@@ -192,7 +192,7 @@ const Saved = () => {
       </div>
       <Outlet />
     </section>
-    <div className="flex items-center justify-between mt-4 capitalize h-[2rem]">
+    <div className="flex md:flex-row flex-col items-center justify-between  mt-4 capitalize h-[2rem]">
         <span>
           Project Created by{" "}
           <a
