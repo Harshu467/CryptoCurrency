@@ -82,12 +82,13 @@ const Saved = () => {
                     >
                       <td className="py-4 uppercase flex items-center">
                         <SaveBtn data={data} />
-
+                        <Link to={`/${data.id}`} className="cursor-pointer">
                         <img
-                          src={data.image}
-                          alt={data.id}
                           className="w-[3.2rem] h-[3.2rem] mx-1.5"
+                          src={data.image}
+                          alt={data.name}
                         />
+                      </Link>
                         <span className="cursor-pointer">
                           <Link to={`${data.id}`} className="cursor-pointer">
                             {data.symbol}
